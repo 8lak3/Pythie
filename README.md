@@ -50,18 +50,17 @@ Online sources are accessed only through manual clicks by the user.
 
 ## 📁 Project Structure
 
-
 pythie/
+
 ├── main.py
+
 ├── modules/
+
 ├── data/
+
 ├── user/
+
 └── docs/
-
-
-
-
-
 
 ---
 
@@ -70,39 +69,44 @@ pythie/
 - ANSM / BDPM (France)
 - WHO (ATC / DDD index)
 - EMA (Europe)
-- WADA (Banned substances list)
+- WADA (Prohibited substance list)
 
-➡️ See [`docs/sources.md`](docs/sources.md) for full details
+📄 Full list available in: [`docs/sources.md`](docs/sources.md)
 
 ---
 
 ## 📄 License
 
-Apache 2.0 License  
-Based on public sources: ANSM, BDPM, WHO, EMA, WADA
+Distributed under the **Apache 2.0 License**  
+Based on official public data: ANSM, BDPM, WHO, EMA, WADA
 
 ---
 
 ## 📊 Development Roadmap
 
-➡️ [`docs/roadmap.md`](docs/roadmap.md)
+🧱 [`docs/roadmap.md`](docs/roadmap.md)
 
 ---
+
 ## 🙏 Support
-If you wish to support the project you can:
 
-send anonymous donations (with XMR at the address below)
+If you'd like to support the project:
 
-or simply: ⭐ Star the repo, share feedback, or contribute!
+- ⭐ Star the repository  
+- 🧑‍💻 Contribute or suggest improvements  
+- 📢 Share the project  
+- 🪙 Or donate anonymously via Monero (XMR)
 
-Thanks!
+---
 
-## 💵 Donations
+## 💵 Donate 
 
- If you would like to make a donation 
+If you would like to make a donation 
  
- 🪙 XMR: 85sZTW44ER3MKnbLhmLwYggc6BjjVW56kSbNN1T79DLDgdg8rgBSXzKfPtdXktXZBZ9s8ttCTgzMiK21k7XYXZsu4cReTMo 
+🪙 XMR: 85sZTW44ER3MKnbLhmLwYggc6BjjVW56kSbNN1T79DLDgdg8rgBSXzKfPtdXktXZBZ9s8ttCTgzMiK21k7XYXZsu4cReTMo 
  
- Thank you!
+Thank you!
+
+---
 
 
