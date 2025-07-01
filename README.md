@@ -3,9 +3,10 @@
 ---
 <p align="center">
   <strong style="font-size: 1.6rem;">P&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;E</strong><br>
-  <em>Personal Medication Guide (FR-Focused) – Personal Medication Guide</em>
+  <em>Pharmaceutical Help Agent – Personal Medication Guide (FR-Focused)</em>
 </p>
 
+---
 ---
 
 # 🧠 Pythie – Personal Medication Guide
