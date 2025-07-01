@@ -99,7 +99,7 @@ If you'd like to support the project:
 
 ---
 
-## 💵 Donate 
+## 💵 Donation 
 
 If you would like to make a donation 
  
