@@ -1,67 +1,67 @@
 
-
 ---
+
 <p align="center">
   <strong style="font-size: 1.6rem;">P&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;E</strong><br>
   <em>Pharmaceutical Help Agent – Personal Medication Guide (FR-Focused)</em>
 </p>
 
 ---
----
 
 # 🧠 Pythie – Personal Medication Guide
 
-**Pythie** is a privacy-first, open-source assistant that helps patients understand their medications, detect general alerts, and access verified medical sources — without collecting any personal data.
+**Pythie** is a privacy-first, open-source assistant that helps patients better understand their medications, detect basic health risks, and access verified medical sources — all without collecting personal data.
 
 🔍 Simple  
 🔐 Respectful  
-🌐 Local-first, with optional online lookups
+🌐 Local-first, with optional online access
 
 ---
 
 ## 🎯 Vision
 
-Pythie empowers patients with clarity on medications and treatments, based on trustworthy sources (ANSM, WHO, WADA).  
-It does not replace a doctor — it **guides, informs, and protects**.
+Pythie empowers patients with clarity on treatments, based on trusted medical data (ANSM, WHO, WADA).  
+It does not replace a healthcare provider — it **guides, informs, and protects**.
 
 ---
 
-## 🧱 Modules (planned)
+## 🧱 Planned Modules
 
 - `dci_fr` – French DCI ↔ Brand mapping (via BDPM)
-- `alias_international` – Foreign brand aliases by country
-- `interact` – Drug interaction checker (via ANSM Thesaurus)
-- `contra` – Global contraindications (pregnancy, allergies, renal failure)
-- `alerts` – General alerts based on patient profile
-- `calendar` *(optional)* – Medication intake planner
-- `doping` *(optional)* – WADA substance checker
+- `alias_international` – International brand name matching
+- `interact` – Drug interaction checker (from ANSM Thesaurus)
+- `contra` – Global contraindications (pregnancy, allergies, etc.)
+- `alerts` – Warnings based on user profile (age, chronic illness, etc.)
+- `calendar` *(optional)* – Treatment reminder and intake calendar
+- `doping` *(optional)* – WADA doping substance checker
 
 ---
 
 ## 🛡️ Privacy First
 
-- No login  
-- No cloud  
+- No account required  
+- No cloud storage  
 - No tracking
 
-📁 All data is stored locally as `.json` files.  
-External sources are accessed only via user-initiated links.
+📁 All user data is stored locally in `.json` files.  
+Online sources are accessed only through manual clicks by the user.
 
 ---
 
-## 📁 Structure
+## 📁 Project Structure
+
 
 pythie/
-
 ├── main.py
-
 ├── modules/
-
 ├── data/
-
 ├── user/
+└── docs/
 
-├── docs/
+
+
+
+
 
 ---
 
@@ -88,6 +88,14 @@ Based on public sources: ANSM, BDPM, WHO, EMA, WADA
 ➡️ [`docs/roadmap.md`](docs/roadmap.md)
 
 ---
+## 🙏 Support
+If you wish to support the project you can:
+
+send anonymous donations (with XMR at the address below)
+
+or simply: ⭐ Star the repo, share feedback, or contribute!
+
+Thanks!
 
 ## 💵 Donations
 
