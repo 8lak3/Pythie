@@ -20,6 +20,17 @@ Aucune donnée commerciale ou propriétaire n’est incluse dans le projet.
 
 ---
 
+### 🔔 Médicaments et grossesse (tératogènes)
+
+Certaines règles d’alerte (grossesse, allaitement) sont établies à partir des notices issues de l’ANSM et de la classification des risques connus.
+
+- [https://ansm.sante.fr](https://ansm.sante.fr)
+- Sources croisées avec les monographies de la BDPM et le thésaurus
+
+Pythie ne donne aucun avis médical — ces alertes servent uniquement à informer de précautions connues et officielles.
+
+---
+
 ## 🌍 International
 
 ### 🌐 OMS / WHO – ATC / DDD Index
