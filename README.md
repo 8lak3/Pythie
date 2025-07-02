@@ -109,6 +109,15 @@ Thank you!
 
 ---
 
+## 👤 Author / Maintainer
+
+This project is developed and maintained by @8lak3 (Blake)
+
+Feedback and contributions are welcome via [GitHub issues] (https://github.com/8lak3/pythie/issues)
+
+
+---
+
 Thank you for supporting open, privacy-respecting tools 🙏
 
 ---
