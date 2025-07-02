@@ -8,7 +8,7 @@ Aucune donnée commerciale ou propriétaire n’est incluse dans le projet.
 ## 🇫🇷 France – ANSM / BDPM
 
 ### 🔗 Base de données publique des médicaments (BDPM)
-> DCI, spécialités, classes ATC, excipients, contre indication, précaution, statuts
+> DCI, spécialités, classes ATC, excipients, contre-indications, précautions d’emploi, statuts
 
 - [https://base-donnees-publique.medicaments.gouv.fr](https://base-donnees-publique.medicaments.gouv.fr)
 - [Téléchargement CSV officiel](https://base-donnees-publique.medicaments.gouv.fr/telechargement.php)
@@ -16,10 +16,7 @@ Aucune donnée commerciale ou propriétaire n’est incluse dans le projet.
 ### 🔗 Thésaurus des interactions médicamenteuses (PDF)
 > Référentiel d’interactions par substance active
 
-- [Thésaurus de l’ANSM](https://ansm.sante.fr/documents/reference/thesaurus-des-interactions-medicamenteuses-1)
-(https://ansm.sante.fr)
-
-  
+- [Thésaurus de l’ANSM (PDF)](https://ansm.sante.fr/documents/reference/thesaurus-des-interactions-medicamenteuses-1)
 
 ---
 
@@ -38,8 +35,7 @@ Aucune donnée commerciale ou propriétaire n’est incluse dans le projet.
 ### 🧪 WADA – Agence mondiale antidopage
 > Liste des substances interdites (mise à jour annuelle)
 
-- [(https://www.wada-ama.org/fr/liste-des-interdictions)]
-   (https://www.wada-ama.org/fr)
+- [WADA – Liste des interdictions (FR)](https://www.wada-ama.org/fr/liste-des-interdictions)
 
 ---
 
@@ -61,5 +57,4 @@ Les fichiers transformés sont documentés dans le dépôt et signalés comme te
 
 ---
 
-Merci aux organismes publics pour leur transparence 🙏
-
+🙏 Merci aux organismes publics pour leur transparence.
