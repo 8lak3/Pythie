@@ -20,6 +20,17 @@ No proprietary or commercial data is included in the project.
 
 ---
 
+### 🔔 Medications and Pregnancy (Teratogenic Risk)
+
+Certain alert rules (pregnancy, breastfeeding) are based on drug labels published by the ANSM and official risk classifications.
+
+- [https://ansm.sante.fr](https://ansm.sante.fr)
+- Cross-referenced with BDPM monographs and the official interaction thesaurus
+
+⚠️ Pythie does not provide medical advice. These alerts are for informational purposes only, based on publicly documented precautions.
+
+---
+
 ## 🌍 International Sources
 
 ### 🌐 WHO – ATC / DDD Index
