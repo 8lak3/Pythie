@@ -17,7 +17,6 @@ Aucune donnée commerciale ou propriétaire n’est incluse dans le projet.
 > Référentiel d’interactions par substance active
 
 - [Thésaurus de l’ANSM](https://ansm.sante.fr/documents/reference/thesaurus-des-interactions-medicamenteuses-1)
-  
 (https://ansm.sante.fr)
 
   
@@ -40,7 +39,6 @@ Aucune donnée commerciale ou propriétaire n’est incluse dans le projet.
 > Liste des substances interdites (mise à jour annuelle)
 
 - [(https://www.wada-ama.org/fr/liste-des-interdictions)]
-  
    (https://www.wada-ama.org/fr)
 
 ---
