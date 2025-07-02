@@ -71,7 +71,8 @@ pythie/
 - EMA (Europe)
 - WADA (Prohibited substance list)
 
-📄 Full list available in: [`docs/sources.md`](docs/sources.md)
+📄 See [`docs/sources.en.md`](docs/sources.en.md) for full details
+
 
 ---
 
