@@ -85,7 +85,7 @@ Based on official public data: ANSM, BDPM, WHO, EMA, WADA
 
 ## 📊 Development Roadmap
 
-🧱 [`docs/roadmap.md`](docs/roadmap.md)
+🧱 [`docs/roadmap.md`](roadmap.en.md)
 
 ---
 
