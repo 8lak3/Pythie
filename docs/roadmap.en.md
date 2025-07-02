@@ -68,4 +68,10 @@ You can help Pythie grow:
 - 🧑‍💻 Submit ideas or PRs
 - 💬 Share feedback
 - 🪙 Donate anonymously via Monero (XMR)
+  
+🪙 XMR: 85sZTW44ER3MKnbLhmLwYggc6BjjVW56kSbNN1T79DLDgdg8rgBSXzKfPtdXktXZBZ9s8ttCTgzMiK21k7XYXZsu4cReTMo
+
+---
+
+Thanks for supporting ethical, privacy-focused health tools 🙏
 
