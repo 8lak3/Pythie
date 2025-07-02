@@ -1,4 +1,4 @@
-# 🗺️ Pythie – Feuille de route / Roadmap
+# 🗺️ Pythie – Feuille de route (Roadmap)
 
 Cette feuille de route (roadmap) décrit les étapes prévues du développement de **Pythie**, de la phase de réflexion jusqu'aux premiers modules utilisables.
 
