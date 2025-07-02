@@ -105,6 +105,14 @@ Merci!
 
 ---
 
+## 👤 Auteur / Mainteneur
+
+Ce projet est développé et maintenu à titre personnel par @8lak3 (Blake)
+
+Pour toute suggestion ou retour, vous pouvez utiliser les [issues GitHub] (https://github.com/8lak3/pythie/issues)
+
+---
+
 Merci pour votre soutien aux outils de santé libres et éthiques 🙏
 
 ---
