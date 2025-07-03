@@ -19,10 +19,22 @@ def get_dci_from_brand(brand_name):
 
 def get_brand_from_dci(dci):
     """
-    Retourne le nom commercial français pour une DCI donnée.
+    Retourne le nom commercial français correspondant à une DCI.
     """
     dci = dci.lower()
     for med in medicines:
         if med["dci"].lower() == dci:
             return med.get("region_names", {}).get("FR")
+    return None
+
+def get_full_medicine_by_name(name):
+    """
+    Retourne le dictionnaire complet du médicament, en cherchant soit par DCI, soit par nom FR.
+    """
+    name = name.lower()
+    for med in medicines:
+        if med["dci"].lower() == name:
+            return med
+        if med.get("region_names", {}).get("FR", "").lower() == name:
+            return med
     return None
