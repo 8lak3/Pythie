@@ -80,7 +80,7 @@ Basé exclusivement sur des sources publiques officielles
 
 ## 🗺️ Feuille de route
 
-📄 [../docs/roadmap.md]
+📄 [../docs/roadmap.md] (../docs/roadmap.md)
 
 ---
 
