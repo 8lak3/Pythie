@@ -123,5 +123,5 @@ Thank you for supporting open, privacy-respecting tools 🙏
 
 ---
 
-📝 This project is also available in French: [README.fr.md](README.fr.md)
+📝 This project is also available in French: [README.fr.md](docs/README.fr.md)
 
