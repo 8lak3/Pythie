@@ -80,7 +80,7 @@ Basé exclusivement sur des sources publiques officielles
 
 ## 🗺️ Feuille de route
 
-📄 [../docs/roadmap.md](../docs/roadmap.md)
+📄 [../docs/roadmap.md]
 
 ---
 
@@ -117,6 +117,6 @@ Merci pour votre soutien aux outils de santé libres et éthiques 🙏
 
 ---
 
-📝 English version available here: [← Retour au README anglais](../README.md)
+📝 English version available here: [../README.md](../README.md)
 
 
