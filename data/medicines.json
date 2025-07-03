@@ -1,0 +1,59 @@
+[
+  {
+    "name": "Paracetamol",
+    "dci": "Paracetamol",
+    "synonyms": ["Acetaminophen"],
+    "region_names": {
+      "FR": "Doliprane",
+      "US": "Tylenol",
+      "UK": "Panadol"
+    },
+    "class_atc": "N02BE01",
+    "interactions": ["Warfarin"],
+    "contraindications": ["Severe liver failure"],
+    "precautions": ["G6PD deficiency", "Chronic alcoholism"],
+    "pregnancy_warning": false,
+    "dopant": false,
+    "allergens": [],
+    "excipient_alert": ["May contain sorbitol or sodium"],
+    "monograph_source": "ANSM"
+  },
+  {
+    "name": "Ibuprofen",
+    "dci": "Ibuprofen",
+    "synonyms": [],
+    "region_names": {
+      "FR": "Nurofen",
+      "US": "Advil",
+      "UK": "Brufen"
+    },
+    "class_atc": "M01AE01",
+    "interactions": ["Aspirin", "Warfarin"],
+    "contraindications": ["Peptic ulcer", "Severe renal impairment"],
+    "precautions": ["Asthma", "Hypertension"],
+    "pregnancy_warning": true,
+    "dopant": false,
+    "allergens": [],
+    "excipient_alert": [],
+    "monograph_source": "ANSM"
+  },
+  {
+    "name": "Amoxicillin",
+    "dci": "Amoxicillin",
+    "synonyms": [],
+    "region_names": {
+      "FR": "Clamoxyl",
+      "US": "Amoxil",
+      "UK": "Amoxicillin"
+    },
+    "class_atc": "J01CA04",
+    "interactions": ["Methotrexate", "Warfarin"],
+    "contraindications": ["Penicillin allergy"],
+    "precautions": [],
+    "pregnancy_warning": false,
+    "dopant": false,
+    "allergens": ["Penicillin"],
+    "excipient_alert": ["May contain lactose"],
+    "monograph_source": "ANSM"
+  }
+]
