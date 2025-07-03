@@ -67,7 +67,7 @@ Les sources en ligne ne sont consultées que manuellement par l’utilisateur.
 - EMA (Agence européenne du médicament)
 - WADA (liste des substances dopantes)
 
-📄 Voir [docs/sources.md](docs/sources.md) pour les détails
+📄 Voir docs/sources.md pour les détails
 
 ---
 
@@ -117,5 +117,6 @@ Merci pour votre soutien aux outils de santé libres et éthiques 🙏
 
 ---
 
-📝 English version available here: [README.md](README.md)
+📝 English version available here: [← Retour au README anglais](../README.md)
+
 
