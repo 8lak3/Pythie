@@ -29,7 +29,8 @@ def get_brand_from_dci(dci):
 
 def get_full_medicine_by_name(name):
     """
-    Retourne le dictionnaire complet du médicament, en cherchant soit par DCI, soit par nom FR.
+    Retourne le dictionnaire complet du médicament,
+    en cherchant soit par DCI, soit par nom FR.
     """
     name = name.lower()
     for med in medicines:
