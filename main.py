@@ -1,5 +1,6 @@
-from modules import dci_fr, interact
-from user.data.profil import profil as profil_module
+import json
+import os
+from modules import dci_fr, interact, alert
 
 def display_medicine_info(med):
     print(f"\n🧾 DCI : {med['dci']}")
@@ -35,20 +36,65 @@ def interaction_test():
     else:
         print("✅ Aucune interaction connue.")
 
-def profil_menu():
-    print("\n🩺 PROFIL SANTÉ")
-    profil_obj = profil_module.charger_profil()
-    if profil_obj:
-        profil_obj.afficher()
+def load_profil_sante(filepath="user/data/profil/profil.json"):
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data
+    except FileNotFoundError:
+        print(f"❌ Fichier profil non trouvé : {filepath}")
+        return None
+
+def test_alertes():
+    profil_data = load_profil_sante()
+    if not profil_data:
+        return
+
+    traitements = profil_data.get("traitements", [])
+    allergies = profil_data.get("allergies", [])
+    pathologies = profil_data.get("pathologies", [])
+    enceinte = profil_data.get("enceinte", False)
+
+    print("\n🔔 Vérification des alertes pour le profil santé...")
+
+    interactions = alert.alert_interactions(traitements)
+    if interactions:
+        print("⚠️ Interactions détectées entre médicaments :")
+        for m1, m2 in interactions:
+            print(f"  - {m1} ↔ {m2}")
     else:
-        print("❌ Aucun profil chargé ou erreur lors du chargement.")
+        print("✅ Aucune interaction médicamenteuse détectée.")
+
+    allerg = alert.alert_allergies(traitements, allergies)
+    if allerg:
+        print("⚠️ Médicaments contenant des allergènes pour ce patient :")
+        for med in allerg:
+            print(f"  - {med}")
+    else:
+        print("✅ Aucun allergène détecté dans les médicaments.")
+
+    contra = alert.alert_contraindications(traitements, pathologies)
+    if contra:
+        print("⚠️ Médicaments contre-indiqués avec les pathologies du patient :")
+        for med in contra:
+            print(f"  - {med}")
+    else:
+        print("✅ Aucun médicament contre-indiqué détecté.")
+
+    preg = alert.alert_pregnancy(traitements, enceinte)
+    if preg:
+        print("⚠️ Médicaments à risque pendant la grossesse :")
+        for med in preg:
+            print(f"  - {med}")
+    else:
+        print("✅ Aucun médicament à risque grossesse détecté.")
 
 def main_menu():
     print("\n🧠 Pythie – Assistant Médicamenteux (mode test CLI)")
     print("----------------------------------------------------")
     print("1️⃣ Rechercher un médicament")
     print("2️⃣ Tester une interaction")
-    print("3️⃣ Voir profil santé")
+    print("3️⃣ Vérifier les alertes du profil santé")
     print("4️⃣ Quitter")
 
     while True:
@@ -58,7 +104,7 @@ def main_menu():
         elif choice == "2":
             interaction_test()
         elif choice == "3":
-            profil_menu()
+            test_alertes()
         elif choice == "4":
             print("👋 Au revoir.")
             break
