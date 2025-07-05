@@ -1,4 +1,5 @@
 import json
+import os
 
 class ProfilSante:
     def __init__(self, identifiant, age, sexe, enceinte, poids_kg, taille_cm,
@@ -29,10 +30,10 @@ class ProfilSante:
         print(f"Femme enceinte : {'Oui' if self.enceinte else 'Non'}")
         print(f"Poids : {self.poids_kg} kg - Taille : {self.taille_cm} cm")
         print(f"Groupe sanguin : {self.groupe_sanguin}")
-        print(f"Pathologies : {', '.join(self.pathologies)}")
-        print(f"Allergies : {', '.join(self.allergies)}")
-        print(f"Antécédents : {', '.join(self.antecedents)}")
-        print(f"Traitements en cours : {', '.join(self.traitements)}")
+        print(f"Pathologies : {', '.join(self.pathologies) if self.pathologies else 'Aucune'}")
+        print(f"Allergies : {', '.join(self.allergies) if self.allergies else 'Aucune'}")
+        print(f"Antécédents : {', '.join(self.antecedents) if self.antecedents else 'Aucun'}")
+        print(f"Traitements en cours : {', '.join(self.traitements) if self.traitements else 'Aucun'}")
         print("Vaccinations :")
         for v, d in self.vaccinations.items():
             print(f"  - {v} : {d}")
@@ -71,11 +72,25 @@ def creer_profil_exemple():
         }
     )
 
-def sauvegarder_profil(profil, nom_fichier="profil_sante.json"):
+def sauvegarder_profil(profil, nom_fichier=None):
+    if not nom_fichier:
+        # Chemin par défaut relatif au fichier
+        nom_fichier = os.path.join(os.path.dirname(__file__), "profil.json")
     with open(nom_fichier, "w", encoding="utf-8") as f:
         json.dump(profil.to_dict(), f, indent=2, ensure_ascii=False)
     print(f"✅ Profil sauvegardé dans {nom_fichier}")
 
+def charger_profil(nom_fichier=None):
+    if not nom_fichier:
+        nom_fichier = os.path.join(os.path.dirname(__file__), "profil.json")
+    try:
+        with open(nom_fichier, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        profil = ProfilSante(**data)
+        return profil
+    except Exception as e:
+        print(f"❌ Erreur lors du chargement du profil : {e}")
+        return None
 
 if __name__ == "__main__":
     profil = creer_profil_exemple()
