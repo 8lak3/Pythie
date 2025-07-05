@@ -1,4 +1,5 @@
 from modules import dci_fr, interact
+from user.data.profil import profil as profil_module
 
 def display_medicine_info(med):
     print(f"\n🧾 DCI : {med['dci']}")
@@ -34,20 +35,31 @@ def interaction_test():
     else:
         print("✅ Aucune interaction connue.")
 
+def profil_menu():
+    print("\n🩺 PROFIL SANTÉ")
+    profil_obj = profil_module.charger_profil()
+    if profil_obj:
+        profil_obj.afficher()
+    else:
+        print("❌ Aucun profil chargé ou erreur lors du chargement.")
+
 def main_menu():
     print("\n🧠 Pythie – Assistant Médicamenteux (mode test CLI)")
     print("----------------------------------------------------")
     print("1️⃣ Rechercher un médicament")
     print("2️⃣ Tester une interaction")
-    print("3️⃣ Quitter")
+    print("3️⃣ Voir profil santé")
+    print("4️⃣ Quitter")
 
     while True:
-        choice = input("\nSélectionnez une option (1/2/3) : ").strip()
+        choice = input("\nSélectionnez une option (1/2/3/4) : ").strip()
         if choice == "1":
             lookup_medicine()
         elif choice == "2":
             interaction_test()
         elif choice == "3":
+            profil_menu()
+        elif choice == "4":
             print("👋 Au revoir.")
             break
         else:
