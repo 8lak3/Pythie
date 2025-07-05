@@ -1,69 +1,54 @@
 from modules import dci_fr, interact
 
-def alert_interactions(med_names):
-    """
-    Vérifie toutes les interactions possibles entre une liste de médicaments.
-    med_names : liste de noms (DCI ou marque FR)
-    Retourne une liste de tuples (med1, med2) pour les interactions détectées.
-    """
-    alerts = []
-    n = len(med_names)
-    for i in range(n):
-        for j in range(i + 1, n):
-            res = interact.check_interaction(med_names[i], med_names[j])
-            if res:
-                alerts.append((med_names[i], med_names[j]))
-    return alerts
+def alert_interactions(traitements):
+    """Retourne une liste de couples (med1, med2) présentant une interaction."""
+    interactions = []
+    for i in range(len(traitements)):
+        for j in range(i + 1, len(traitements)):
+            if interact.check_interaction(traitements[i], traitements[j]):
+                interactions.append((traitements[i], traitements[j]))
+    return interactions
 
-def alert_allergies(med_names, allergies):
-    """
-    Vérifie si un médicament contient un allergène présent dans la liste d'allergies.
-    med_names : liste de noms (DCI ou marque FR)
-    allergies : liste d’allergies du patient (ex : ['Pénicilline'])
-    Retourne une liste des médicaments posant problème.
-    """
-    meds_with_allergies = []
-    for med_name in med_names:
+def alert_allergies(traitements, allergies_patient):
+    """Retourne la liste des médicaments contenant des allergènes présents dans le profil."""
+    alertes = []
+    allergies_patient_lower = [a.lower() for a in allergies_patient]
+    for med_name in traitements:
         med = dci_fr.get_full_medicine_by_name(med_name)
-        if med:
-            allergens = med.get("allergens", [])
-            for allergy in allergies:
-                # On compare en minuscules pour éviter problème de casse
-                if any(allergy.lower() == a.lower() for a in allergens):
-                    meds_with_allergies.append(med_name)
-                    break
-    return meds_with_allergies
+        if not med:
+            continue
+        allergens = med.get("allergens", [])
+        for allergen in allergens:
+            if allergen.lower() in allergies_patient_lower:
+                alertes.append(med_name)
+                break
+    return alertes
 
-def alert_contraindications(med_names, pathologies):
-    """
-    Vérifie si un médicament est contre-indiqué avec une pathologie du patient.
-    med_names : liste de noms (DCI ou marque FR)
-    pathologies : liste des pathologies du patient
-    Retourne une liste des médicaments contre-indiqués.
-    """
-    contraindicated = []
-    for med_name in med_names:
+def alert_contraindications(traitements, pathologies_patient):
+    """Retourne la liste des médicaments contre-indiqués par les pathologies."""
+    alertes = []
+    pathologies_lower = [p.lower() for p in pathologies_patient]
+    for med_name in traitements:
         med = dci_fr.get_full_medicine_by_name(med_name)
-        if med:
-            ci = med.get("contraindications", [])
-            for patho in pathologies:
-                if any(patho.lower() == c.lower() for c in ci):
-                    contraindicated.append(med_name)
-                    break
-    return contraindicated
+        if not med:
+            continue
+        contra = med.get("contraindications", [])
+        for c in contra:
+            # Simplification : on compare directement les chaînes en lowercase
+            if c.lower() in pathologies_lower:
+                alertes.append(med_name)
+                break
+    return alertes
 
-def alert_pregnancy(med_names, enceinte):
-    """
-    Si la personne est enceinte, retourne les médicaments à risque pendant la grossesse.
-    med_names : liste de noms (DCI ou marque FR)
-    enceinte : booléen
-    Retourne la liste des médicaments à risque.
-    """
+def alert_pregnancy(traitements, enceinte):
+    """Retourne la liste des médicaments à risque pendant la grossesse si enceinte."""
     if not enceinte:
         return []
-    risky_meds = []
-    for med_name in med_names:
+    alertes = []
+    for med_name in traitements:
         med = dci_fr.get_full_medicine_by_name(med_name)
-        if med and med.get("pregnancy_warning", False):
-            risky_meds.append(med_name)
-    return risky_meds
+        if not med:
+            continue
+        if med.get("pregnancy_warning"):
+            alertes.append(med_name)
+    return alertes
