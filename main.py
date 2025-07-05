@@ -1,7 +1,4 @@
-from modules import dci_fr
-
-print("🧪 Pythie – Medication Lookup")
-print("-----------------------------")
+from modules import dci_fr, interact
 
 def display_medicine_info(med):
     print(f"\n🧾 DCI : {med['dci']}")
@@ -16,16 +13,45 @@ def display_medicine_info(med):
     print(f"🧬 Excipient(s) à risque : {', '.join(med.get('excipient_alert', [])) or 'Aucun'}")
     print(f"📚 Source : {med.get('monograph_source', 'Inconnue')}")
 
-
-while True:
-    user_input = input("\n🔎 Entrez un nom de médicament (DCI ou FR), ou 'exit' : ").strip()
-
-    if user_input.lower() == "exit":
-        print("👋 Au revoir !")
-        break
-
-    med = dci_fr.get_full_medicine_by_name(user_input)
+def lookup_medicine():
+    name = input("\n🔍 Entrez un nom (DCI ou marque FR) : ").strip()
+    med = dci_fr.get_full_medicine_by_name(name)
     if med:
         display_medicine_info(med)
     else:
         print("❌ Médicament non trouvé.")
+
+def interaction_test():
+    print("\n🔬 TEST D’INTERACTION")
+    drug_a = input("Médicament 1 : ").strip()
+    drug_b = input("Médicament 2 : ").strip()
+
+    result = interact.check_interaction(drug_a, drug_b)
+    if result is None:
+        print("❌ Un des médicaments est inconnu.")
+    elif result:
+        print("⚠️ Interaction détectée entre les deux médicaments.")
+    else:
+        print("✅ Aucune interaction connue.")
+
+def main_menu():
+    print("\n🧠 Pythie – Assistant Médicamenteux (mode test CLI)")
+    print("----------------------------------------------------")
+    print("1️⃣ Rechercher un médicament")
+    print("2️⃣ Tester une interaction")
+    print("3️⃣ Quitter")
+
+    while True:
+        choice = input("\nSélectionnez une option (1/2/3) : ").strip()
+        if choice == "1":
+            lookup_medicine()
+        elif choice == "2":
+            interaction_test()
+        elif choice == "3":
+            print("👋 Au revoir.")
+            break
+        else:
+            print("❌ Choix invalide.")
+
+if __name__ == "__main__":
+    main_menu()
