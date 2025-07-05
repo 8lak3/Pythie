@@ -1,0 +1,36 @@
+{
+  "identifiant": "patient_001",
+  "age": 72,
+  "sexe": "Femme",
+  "enceinte": false,
+  "poids_kg": 68,
+  "taille_cm": 165,
+  "groupe_sanguin": "O+",
+  "pathologies": [
+    "Insuffisance rénale",
+    "Hypertension"
+  ],
+  "allergies": [
+    "Pénicilline"
+  ],
+  "antecedents": [
+    "Appendicectomie",
+    "Covid long"
+  ],
+  "traitements": [
+    "Lévothyrox"
+  ],
+  "vaccinations": {
+    "Covid": "2023-10-10",
+    "Grippe": "2024-11-01"
+  },
+  "medecin_traitant": {
+    "nom": "Dr Dupont",
+    "telephone": "00 00 00 00 00"
+  },
+  "habitudes_vie": {
+    "tabac": false,
+    "alcool": "rare",
+    "sport": "modéré"
+  }
+}
